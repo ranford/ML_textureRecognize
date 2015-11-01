@@ -12,9 +12,9 @@ clear options;
 Nim=128;%TODO waiting for filters to be appliccable for non-dyadic sizes
 copts.renorm_process=0;
 copts.l2_renorm=1;
-foptions.J=7;
+foptions.J=4;
 foptions.L=8;
-soptions.M=2;
+soptions.M=3;
 [Wop,filters]=wavelet_factory_2d([Nim Nim], foptions, soptions);
 
 dirac=zeros(Nim);
@@ -42,6 +42,7 @@ set(gca,'XTick',[]);
 set(gca,'YTick',[]);
 axis square
 
+
 figure
 imagesc(cur_disp{1})
 %colormap(invgg);
@@ -58,4 +59,9 @@ set(gca,'YTick',[]);
 axis square
 
 
+magesc(cur_disp{3});
+%colormap(invgg);
+set(gca,'XTick',[]);
+set(gca,'YTick',[]);
+axis square
 
