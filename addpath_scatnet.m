@@ -1,4 +1,4 @@
-path_to_scatnet = fileparts(mfilename('fullpath'));
+path_to_scatnet = fullfile(fileparts(mfilename('fullpath')),'src');
 
 addpath(fullfile(path_to_scatnet, 'classification'));
 addpath(fullfile(path_to_scatnet, 'convolution'));
@@ -10,7 +10,6 @@ addpath(fullfile(path_to_scatnet, 'filters/selesnick'));
 addpath(fullfile(path_to_scatnet, 'utils'));
 addpath(genpath(fullfile(path_to_scatnet, 'papers')));
 addpath(fullfile(path_to_scatnet, 'scatutils'));
-addpath(genpath(fullfile(path_to_scatnet, 'unittest')));
 addpath(fullfile(path_to_scatnet, 'utils'));
 addpath(fullfile(path_to_scatnet, 'reconstruction'));
 addpath(genpath(fullfile(path_to_scatnet, 'database')));
